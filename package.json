@@ -1,0 +1,53 @@
+{
+	"name": "@canister/models",
+	"version": "1.0.0",
+	"description": "Canister's database models shared between the Core and API",
+	"author": "Canister <support@canister.me> (https://canister.me)",
+	"contributors": [
+		"Aarnav Tale <aarnav@tale.me> (https://aarnavtale.com)"
+	],
+	"license": "MIT",
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.js",
+			"import": "./dist/index.mjs",
+			"types": "./dist/index.d.ts"
+		}
+	},
+	"scripts": {
+		"build": "tsup ./src/index.ts --format cjs,esm --dts --clean",
+		"prepublishOnly": "pnpm run build",
+		"push": "np"
+	},
+	"keywords": [
+		"apt",
+		"dpkg",
+		"parser",
+		"release",
+		"packages",
+		"aptitude",
+		"debian",
+		"linux",
+		"packaging"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/cnstr/apt-parser.git"
+	},
+	"bugs": {
+		"url": "https://github.com/cnstr/apt-parser/issues"
+	},
+	"homepage": "https://github.com/cnstr/apt-parser#readme",
+	"devDependencies": {
+		"np": "^7.6.0",
+		"tsup": "^5.11.11",
+		"typeorm": "^0.3.0",
+		"typescript": "^4.5.4"
+	},
+	"peerDependencies": {
+		"typeorm": "*"
+	}
+}

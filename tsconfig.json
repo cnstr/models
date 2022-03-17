@@ -1,0 +1,13 @@
+{
+	"exclude": ["dist"],
+	"compilerOptions": {
+		"rootDir": "./src",
+		"outDir": "./dist",
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true
+	}
+}
