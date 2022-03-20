@@ -12,7 +12,7 @@ export class Package {
 	package: string
 
 	@Column('bool', { nullable: false })
-	@Index('is_current_idx')
+	@Index('package_current_idx')
 	// @ts-ignore
 	isCurrent: boolean
 
@@ -23,6 +23,11 @@ export class Package {
 	@Column('varchar', { nullable: false })
 	// @ts-ignore
 	price: string
+
+	@Column('smallint', { nullable: false })
+	@Index('package_tier_idx')
+	// @ts-ignore
+	tier: number
 
 	@Column('varchar', { nullable: false })
 	// @ts-ignore

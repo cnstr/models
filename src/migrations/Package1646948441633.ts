@@ -14,14 +14,12 @@ export class Package1646948441633 implements MigrationInterface {
 			) STORED;
 
 			CREATE INDEX package_vector_idx ON package USING GIN (vector);
-			CREATE INDEX package_tier_idx ON package (tier);
 		`)
 	}
 
 	async down(queryRunner: QueryRunner) {
 		await queryRunner.query(`
 			DROP INDEX IF EXISTS package_vector_idx;
-			DROP INDEX IF EXISTS package_tier_idx;
 			ALTER TABLE package
 			DROP COLUMN vector;
 		`)
