@@ -35,12 +35,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/cnstr/apt-parser.git"
+		"url": "git+https://github.com/cnstr/models.git"
 	},
 	"bugs": {
-		"url": "https://github.com/cnstr/apt-parser/issues"
+		"url": "https://github.com/cnstr/models/issues"
 	},
-	"homepage": "https://github.com/cnstr/apt-parser#readme",
+	"homepage": "https://github.com/cnstr/models#readme",
 	"devDependencies": {
 		"np": "^7.6.0",
 		"tsup": "^5.11.11",
