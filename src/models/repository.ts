@@ -14,11 +14,11 @@ export class Repository {
 	// @ts-ignore
 	tier: number
 
-	@Column('int', { nullable: false })
+	@Column('int', { nullable: true })
 	// @ts-ignore
 	packageCount: number
 
-	@Column('varchar', { array: true, nullable: false, default: [] })
+	@Column('varchar', { array: true, nullable: true, default: [] })
 	// @ts-ignore
 	sections: string[]
 
