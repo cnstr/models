@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, Index, PrimaryGeneratedColumn } from 'typeorm'
 
 // Types are defined by the manifest generator
 enum ManifestType {
@@ -14,10 +14,12 @@ export class Manifest {
 	databaseId: string
 
 	@Column('varchar', { nullable: false })
+	@Index('manifest_url_idx')
 	// @ts-ignore
 	url: string
 
 	@Column('varchar', { nullable: false })
+	@Index('manifest_type_idx')
 	// @ts-ignore
 	type: ManifestType
 }
