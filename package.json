@@ -21,15 +21,11 @@
 		"push": "np --no-tests"
 	},
 	"keywords": [
-		"apt",
-		"dpkg",
-		"parser",
-		"release",
-		"packages",
-		"aptitude",
-		"debian",
-		"linux",
-		"packaging"
+		"typeorm",
+		"database",
+		"typescript",
+		"models",
+		"canister"
 	],
 	"repository": {
 		"type": "git",
