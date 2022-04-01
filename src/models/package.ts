@@ -20,6 +20,10 @@ export class Package {
 	// @ts-ignore
 	repository: Repository
 
+	@Column('varchar', { name: 'repositorySlug', nullable: true })
+	// @ts-ignore
+	repositorySlug: string
+
 	@Column('varchar', { nullable: false })
 	// @ts-ignore
 	price: string
