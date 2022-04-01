@@ -1,5 +1,5 @@
 import { Repository } from './repository'
-import { Column, Entity, Index, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
+import { Column, Entity, Index, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class Package {
@@ -17,6 +17,7 @@ export class Package {
 	isCurrent: boolean
 
 	@ManyToOne(() => Repository, repo => repo.slug, { nullable: false })
+	@JoinColumn({ name: 'repositorySlug' })
 	// @ts-ignore
 	repository: Repository
 
