@@ -1,6 +1,6 @@
 {
 	"name": "@canister/models",
-	"version": "1.0.7",
+	"version": "1.1.0",
 	"description": "Canister's database models shared between the Core and API",
 	"author": "Canister <support@canister.me> (https://canister.me)",
 	"contributors": [
