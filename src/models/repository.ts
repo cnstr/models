@@ -1,4 +1,5 @@
-import { Column, Entity, Index, PrimaryColumn } from 'typeorm'
+import { Column, Entity, Index, JoinColumn, OneToOne, PrimaryColumn } from 'typeorm'
+import { Origin } from './origin'
 
 @Entity()
 export class Repository {
@@ -55,4 +56,9 @@ export class Repository {
 	@Index('package_current_idx')
 	// @ts-ignore
 	isPruned: boolean
+
+	@OneToOne(() => Origin, origin => origin.databaseId, { nullable: false })
+	@JoinColumn({ name: 'originId' })
+	// @ts-ignore
+	repository: Repository
 }
