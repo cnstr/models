@@ -18,7 +18,7 @@
 	"scripts": {
 		"build": "tsup ./src/index.ts --format esm --dts --clean",
 		"prepublishOnly": "pnpm run build",
-		"push": "np --no-tests"
+		"push": "np --no-cleanup --no-tests --message \"chore: v%s\""
 	},
 	"keywords": [
 		"typeorm",
