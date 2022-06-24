@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryColumn } from 'typeorm'
+import { Column, Entity, Index, PrimaryColumn } from 'typeorm'
 
 @Entity()
 export class Repository {
@@ -50,4 +50,9 @@ export class Repository {
 
 	@Column('text', { nullable: true })
 	sileoEndpoint?: string
+
+	@Column('bool', { nullable: false })
+	@Index('package_current_idx')
+	// @ts-ignore
+	isPruned: boolean
 }

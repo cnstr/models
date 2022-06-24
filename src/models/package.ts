@@ -16,6 +16,11 @@ export class Package {
 	// @ts-ignore
 	isCurrent: boolean
 
+	@Column('bool', { nullable: false })
+	@Index('package_current_idx')
+	// @ts-ignore
+	isPruned: boolean
+
 	@ManyToOne(() => Repository, repo => repo.slug, { nullable: false })
 	@JoinColumn({ name: 'repositorySlug' })
 	// @ts-ignore
