@@ -60,5 +60,9 @@ export class Repository {
 	@OneToOne(() => Origin, origin => origin.databaseId, { nullable: false })
 	@JoinColumn({ name: 'originId' })
 	// @ts-ignore
-	repository: Repository
+	origin: Origin
+
+	@Column('varchar', { name: 'originId', nullable: true })
+	// @ts-ignore
+	originId: string
 }
