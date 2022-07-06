@@ -17,7 +17,7 @@ export class Package {
 	isCurrent: boolean
 
 	@Column('bool', { nullable: false })
-	@Index('package_current_idx')
+	@Index('package_pruned_idx')
 	// @ts-ignore
 	isPruned: boolean
 
