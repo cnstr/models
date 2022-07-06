@@ -53,7 +53,7 @@ export class Repository {
 	sileoEndpoint?: string
 
 	@Column('bool', { nullable: false })
-	@Index('package_current_idx')
+	@Index('repo_pruned_idx')
 	// @ts-ignore
 	isPruned: boolean
 
