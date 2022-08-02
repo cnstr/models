@@ -65,4 +65,8 @@ export class Repository {
 	@Column('varchar', { name: 'originId', nullable: true })
 	// @ts-ignore
 	originId: string
+
+	@Column('tsvector', { nullable: false })
+	// @ts-ignore
+	vector: string
 }
