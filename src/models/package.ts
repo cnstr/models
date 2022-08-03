@@ -96,8 +96,4 @@ export class Package {
 
 	@Column('bigint', { nullable: true })
 	installedSize?: number
-
-	@Column('tsvector', { nullable: false })
-	// @ts-ignore
-	vector: string
 }
